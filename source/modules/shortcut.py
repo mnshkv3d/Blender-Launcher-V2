@@ -18,7 +18,7 @@ def create_shortcut(folder, name):
         import win32com.client
         from win32comext.shell import shell, shellcon
 
-        targetpath = library_folder / folder / "blender.exe"
+        targetpath = library_folder / folder / "blender-launcher.exe"
         workingdir = library_folder / folder
         desktop = shell.SHGetFolderPath(0, shellcon.CSIDL_DESKTOP, None, 0)
         dist = Path(desktop) / (name + ".lnk")
